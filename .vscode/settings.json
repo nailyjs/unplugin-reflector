@@ -1,11 +1,17 @@
 {
   "cSpell.words": [
+    "astro",
+    "bumpp",
+    "esno",
+    "farmfe",
     "inversify",
     "malagu",
     "naily",
     "Nuxt",
+    "postbuild",
     "rsbuild",
     "Rspack",
+    "tsup",
     "unplugin"
   ]
 }

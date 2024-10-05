@@ -3,9 +3,14 @@
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@9.9.0",
-  "description": "Reflect metadata generator by naily.",
+  "description": "Simple reflection library based on TypeScript written using unplugin, so you can use it in vite, rspack, nuxt, webpack, etc.",
   "license": "MIT",
   "homepage": "https://github.com/antfu/unplugin-naily#readme",
+  "author": {
+    "name": "Zero",
+    "email": "zero@naily.cc",
+    "url": "https://naily.cc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antfu/unplugin-naily.git"
@@ -14,12 +19,12 @@
     "url": "https://github.com/antfu/unplugin-naily/issues"
   },
   "keywords": [
+    "reflection",
+    "typescript",
     "unplugin",
-    "naily",
     "vite",
     "webpack",
-    "rollup",
-    "transform"
+    "rollup"
   ],
   "exports": {
     ".": {
