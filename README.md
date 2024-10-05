@@ -1,28 +1,15 @@
-# unplugin-starter
+# unplugin-naily-reflector
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
+[![NPM version](https://img.shields.io/npm/v/unplugin-naily-reflector?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-naily-reflector)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
+A reflector for TypeScript files. It's can extract `classes` and `interface declarations` from `.ts` files (currently only support `.ts` files, `.vue` files will be supported in the future, welcome to contribute).
 
-## Template Usage
-
-To use this template, clone it down using:
-
-```bash
-npx degit unplugin/unplugin-starter my-unplugin
-```
-
-And do a global replacement of `unplugin-starter` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+Base on unplugin, it can be used in Vite, Rollup, Webpack, Nuxt, Vue CLI, and more.
 
 ## Install
 
 ```bash
-npm i unplugin-starter
+npm i unplugin-naily-reflector
 ```
 
 <details>
@@ -30,7 +17,7 @@ npm i unplugin-starter
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-starter/vite'
+import Starter from 'unplugin-naily-reflector/vite'
 
 export default defineConfig({
   plugins: [
@@ -48,7 +35,7 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-starter/rollup'
+import Starter from 'unplugin-naily-reflector/rollup'
 
 export default {
   plugins: [
@@ -67,7 +54,7 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-starter/webpack')({ /* options */ })
+    require('unplugin-naily-reflector/webpack')({ /* options */ })
   ]
 }
 ```
@@ -81,7 +68,7 @@ module.exports = {
 // nuxt.config.js
 export default defineNuxtConfig({
   modules: [
-    ['unplugin-starter/nuxt', { /* options */ }],
+    ['unplugin-naily-reflector/nuxt', { /* options */ }],
   ],
 })
 ```
@@ -98,7 +85,7 @@ export default defineNuxtConfig({
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-starter/webpack')({ /* options */ }),
+      require('unplugin-naily-reflector/webpack')({ /* options */ }),
     ],
   },
 }
@@ -112,7 +99,7 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-starter/esbuild'
+import Starter from 'unplugin-naily-reflector/esbuild'
 
 build({
   plugins: [Starter()],
