@@ -1,0 +1,36 @@
+{
+  "name": "backend-app",
+  "keywords": [
+    "malagu-component"
+  ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@malagu/core": "2.56.0",
+    "@malagu/mvc": "2.56.0",
+    "unplugin-naily-reflector": "workspace:*",
+    "@malagu/cli-service": "^2.60.3"
+  },
+  "devDependencies": {
+    "@malagu/cli": "2.56.0",
+    "@malagu/component": "2.56.0",
+    "@malagu/testing": "2.56.0",
+    "@types/supertest": "^2.0.12",
+    "supertest": "^6.2.4",
+    "inversify": "^6.0.2"
+  },
+  "scripts": {
+    "clean": "rimraf lib dist .malagu",
+    "test": "malagu-component test",
+    "build": "malagu build",
+    "start": "malagu serve",
+    "deploy": "malagu deploy -m scf -m test",
+    "deploy:test": "malagu deploy -m scf -m test",
+    "deploy:pre": "malagu deploy -m scf -m pre",
+    "deploy:prod": "malagu deploy -m scf -m prod"
+  }
+}

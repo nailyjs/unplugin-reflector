@@ -1,0 +1,19 @@
+{
+  "name": "rsbuild",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.3"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.0.1",
+    "@rsbuild/plugin-vue": "^1.0.1",
+    "typescript": "^5.5.2",
+    "unplugin-naily-reflector": "workspace:*"
+  }
+}
