@@ -17,11 +17,11 @@ npm i unplugin-naily-reflector
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-naily-reflector/vite'
+import Reflector from 'unplugin-naily-reflector/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    Reflector({ /* options */ }),
   ],
 })
 ```
@@ -35,11 +35,11 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-naily-reflector/rollup'
+import Reflector from 'unplugin-naily-reflector/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    Reflector({ /* options */ }),
   ],
 }
 ```
@@ -99,10 +99,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-naily-reflector/esbuild'
+import Reflector from 'unplugin-naily-reflector/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [Reflector()],
 })
 ```
 

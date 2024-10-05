@@ -1,12 +1,16 @@
-import { reflection } from 'unplugin-naily/reflector-runtime'
 import type { HelloWorldInterface } from './childrenFolder/test-type'
 import type { BazImpl } from './types'
+import { reflection } from 'virtual:unplugin-naily-reflector/runtime'
+
+console.log(reflection[import.meta.id])
 
 if (!Symbol.metadata) {
   // eslint-disable-next-line ts/ban-ts-comment
   // @ts-expect-error
   Symbol.metadata = Symbol('metadata')
 }
+
+import('./test')
 
 export interface FooImpl<T = string> {
   bar: T
@@ -50,15 +54,3 @@ export class Test implements BarImpl {
     return this
   }
 }
-
-export class ITest2<T> {
-  constructor(public a: T, public b: T) {}
-
-  test(a: T) {
-    return a
-  }
-}
-
-console.dir(ITest2)
-
-const test2 = new ITest2('a', 'b')

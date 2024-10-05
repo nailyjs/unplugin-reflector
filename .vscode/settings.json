@@ -13,6 +13,7 @@
     "rsbuild",
     "Rspack",
     "tsup",
-    "unplugin"
+    "unplugin",
+    "vitepress"
   ]
 }

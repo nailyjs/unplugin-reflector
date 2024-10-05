@@ -71,6 +71,11 @@
       "import": "./dist/metadata.js",
       "require": "./dist/metadata.cjs"
     },
+    "./client": {
+      "types": "./client.d.ts",
+      "import": "./dist/client.js",
+      "require": "./dist/client.js"
+    },
     "./*": "./*"
   },
   "main": "dist/index.cjs",
@@ -85,20 +90,25 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "client.d.ts",
+    "client.js"
   ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch src",
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
-    "play": "npm -C playground run dev",
+    "play": "pnpm -F playground run dev",
     "build:play": "npm -C playground run build",
     "preview:play": "npm -C playground run preview",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "peerDependencies": {
     "@farmfe/core": ">=1",
@@ -133,8 +143,8 @@
     }
   },
   "dependencies": {
-    "unplugin": "^1.12.2",
-    "magic-string": "^0.30.11"
+    "magic-string": "^0.30.11",
+    "unplugin": "^1.12.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.0.0",
@@ -154,6 +164,7 @@
     "untyped": "^1.4.2",
     "vite": "^5.4.2",
     "vite-plugin-inspect": "^0.8.7",
+    "vitepress": "^1.3.4",
     "vitest": "^2.0.5",
     "webpack": "^5.94.0"
   }

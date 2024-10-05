@@ -13,7 +13,7 @@ async function convertInterfaceMetadata(interfaceName: string, sourceFile: Sourc
   const methodsText = convertInterfaceMethodsMetadata(singleInterface)
   const propertiesText = convertInterfacePropertiesMetadata(singleInterface)
 
-  const importText = `import { reflection as ____reflect } from 'unplugin-naily/reflector-runtime';`
+  const importText = `import { reflection as ____reflect } from 'virtual:unplugin-naily-reflector/runtime';`
   const preText = `  if (!____reflect['${id}']) ____reflect['${id}'] = {};\n  if (!____reflect['${id}'].interfaces) ____reflect['${id}'].interfaces = {};\n`
   const interfaceText = `  if (!____reflect['${id}'].interfaces['${interfaceName}']) ____reflect['${id}'].interfaces['${interfaceName}'] = { methods: ${methodsText}, properties: ${propertiesText} };\n`
   sourceFile.insertText(0, `${importText}{${preText}${interfaceText}};\n\n`)

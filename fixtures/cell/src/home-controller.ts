@@ -10,8 +10,8 @@ export class HomeController {
     @Get()
     @Text()
     // 像这个藏在Test里的string类型，我就能通过反射拿到
-    home(): Test<string> {
-        return { data: 'Hello malagu.' }
+    home() {
+        return 'Hello world'
     }
 }
 

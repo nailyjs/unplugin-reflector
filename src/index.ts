@@ -22,6 +22,10 @@ function analyzeExclude(exclude: string | RegExp | (string | RegExp)[], id: stri
 
 export const unpluginFactory: UnpluginFactory<Options | undefined> = (options) => {
   const project = new Project()
+  const moduleId = 'unplugin-naily-reflector/runtime'
+  const virtualModuleId = 'virtual:' + moduleId
+  const resolvedModuleId = '\0' + moduleId
+  const resolvedVirtualModuleId = '\0' + virtualModuleId
 
   return [
     {
@@ -29,13 +33,13 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (options) =
       enforce: 'pre',
 
       resolveId(id) {
-        if (id === 'unplugin-naily/reflector-runtime')
+        if (id === virtualModuleId)
           return id
         return null
       },
 
       load(id) {
-        if (id !== 'unplugin-naily/reflector-runtime')
+        if (id !== resolvedVirtualModuleId && id !== virtualModuleId && id !== moduleId && id !== resolvedModuleId)
           return null
         return `export const reflection = {}`
       },
@@ -76,7 +80,7 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (options) =
             map: new MagicString(generatedCode).generateMap({ hires: true }),
           }
         },
-      }
+      },
     }
   ]
 }
