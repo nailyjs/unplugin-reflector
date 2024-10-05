@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.9.0",
   "description": "Simple reflection library based on TypeScript written using unplugin, so you can use it in vite, rspack, nuxt, webpack, etc.",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/unplugin-naily#readme",
+  "homepage": "https://github.com/nailyjs/unplugin-reflector",
   "author": {
     "name": "Zero",
     "email": "zero@naily.cc",
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/unplugin-naily.git"
+    "url": "git+https://github.com/nailyjs/unplugin-reflector.git"
   },
   "bugs": {
-    "url": "https://github.com/antfu/unplugin-naily/issues"
+    "url": "https://github.com/nailyjs/unplugin-reflector/issues"
   },
   "keywords": [
     "reflection",
