@@ -7,5 +7,4 @@ export class DocsDemo {
   foo(bar: string) {}
 }
 
-console.dir(DocsDemo);
-
+console.dir(DocsDemo)

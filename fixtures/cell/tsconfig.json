@@ -1,27 +1,27 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
-    "declaration": true,
-    "declarationMap": true,
-    "noImplicitAny": true,
-    "noEmitOnError": false,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "downlevelIteration": true,
-    "module": "ES2022",
-    "moduleResolution": "Node",
-    "jsx": "react",
     "target": "ES2017",
+    "jsx": "react",
     "lib": [
       "ES2017",
       "dom"
     ],
-    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "rootDir": "src",
-    "outDir": "lib"
+    "module": "ES2022",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "declarationMap": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noEmitOnError": false,
+    "moduleResolution": "Node",
+    "downlevelIteration": true,
+    "outDir": "lib",
+    "sourceMap": true
   },
   "include": [
     "src"

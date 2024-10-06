@@ -11,6 +11,9 @@ importers:
       '@farmfe/core':
         specifier: '>=1'
         version: 1.3.16
+      '@rollup/pluginutils':
+        specifier: ^5.1.2
+        version: 5.1.2(rollup@4.21.2)
       esbuild:
         specifier: '*'
         version: 0.23.1
@@ -9763,7 +9766,7 @@ snapshots:
 
   '@rollup/plugin-commonjs@25.0.8(rollup@4.21.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       commondir: 1.0.1
       estree-walker: 2.0.2
       glob: 8.1.0
@@ -9774,7 +9777,7 @@ snapshots:
 
   '@rollup/plugin-inject@5.0.5(rollup@4.21.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       estree-walker: 2.0.2
       magic-string: 0.30.11
     optionalDependencies:
@@ -9782,13 +9785,13 @@ snapshots:
 
   '@rollup/plugin-json@6.1.0(rollup@4.21.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
     optionalDependencies:
       rollup: 4.21.2
 
   '@rollup/plugin-node-resolve@15.3.0(rollup@4.21.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-module: 1.0.0
@@ -9798,7 +9801,7 @@ snapshots:
 
   '@rollup/plugin-replace@5.0.7(rollup@4.21.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       magic-string: 0.30.11
     optionalDependencies:
       rollup: 4.21.2
@@ -10530,7 +10533,7 @@ snapshots:
   '@vue-macros/common@1.14.0(rollup@4.21.2)(vue@3.5.11(typescript@5.5.4))':
     dependencies:
       '@babel/types': 7.25.7
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       '@vue/compiler-sfc': 3.5.11
       ast-kit: 1.2.1
       local-pkg: 0.5.0
@@ -13608,7 +13611,7 @@ snapshots:
 
   impound@0.1.0(rollup@4.21.2)(webpack-sources@3.2.3):
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       mlly: 1.7.1
       pathe: 1.1.2
       unenv: 1.10.0
@@ -14538,7 +14541,7 @@ snapshots:
       '@rollup/plugin-node-resolve': 15.3.0(rollup@4.21.2)
       '@rollup/plugin-replace': 5.0.7(rollup@4.21.2)
       '@rollup/plugin-terser': 0.4.4(rollup@4.21.2)
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       '@types/http-proxy': 1.17.15
       '@vercel/nft': 0.26.5
       archiver: 7.0.1
@@ -16701,7 +16704,7 @@ snapshots:
 
   unimport@3.11.1(rollup@4.21.2):
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       acorn: 8.12.1
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
@@ -16776,7 +16779,7 @@ snapshots:
   unplugin-vue-router@0.10.8(rollup@4.21.2)(vue-router@4.4.5(vue@3.5.11(typescript@5.5.4)))(vue@3.5.11(typescript@5.5.4))(webpack-sources@3.2.3):
     dependencies:
       '@babel/types': 7.25.4
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       '@vue-macros/common': 1.14.0(rollup@4.21.2)(vue@3.5.11(typescript@5.5.4))
       ast-walker-scope: 0.6.2
       chokidar: 3.6.0

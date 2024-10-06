@@ -1,14 +1,14 @@
 {
-  "private": true,
   "name": "playground",
+  "private": true,
   "scripts": {
     "dev": "nodemon -w '../src/**/*.ts' -e .ts -x vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "unplugin-naily-reflector": "workspace:*",
     "vite": "^5.4.5",
-    "vite-plugin-inspect": "^0.8.7",
-    "unplugin-naily-reflector": "workspace:*"
+    "vite-plugin-inspect": "^0.8.7"
   }
 }

@@ -1,16 +1,16 @@
 import 'unplugin-naily-reflector/metadata'
-import { createApp } from 'vue';
-import App from './App.vue';
-import './index.css';
+import { createApp } from 'vue'
+import App from './App.vue'
+import './index.css'
 
-createApp(App).mount('#root');
+createApp(App).mount('#root')
 
 interface Hello {
-  name: string;
+  name: string
 }
 
 class Test implements Hello {
-  name = 'Rsbuild';
+  name = 'Rsbuild'
 }
 
 console.dir(Test)

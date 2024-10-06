@@ -1,3 +1,3 @@
 export interface HelloWorldInterface {
-  helloWorld(): void
+  helloWorld: () => void
 }

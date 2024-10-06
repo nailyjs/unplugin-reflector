@@ -1,7 +1,7 @@
 interface SymbolConstructor {
-  readonly metadata: unique symbol;
+  readonly metadata: unique symbol
 }
 
 interface Function {
-  [Symbol.metadata]: Record<string, any>;
+  [Symbol.metadata]: Record<string, any>
 }

@@ -4,7 +4,6 @@
 目前要做的工作还有很多，现在这些最基础的信息提取已经可以使用了，像JsDoc的注释提取等现在还比较简陋，后续会慢慢完善。
 :::
 
-
 我们基于TC39的`Symbol.metadata`提案，提取到的类的静态信息存放在本类静态的`[Symbol.metadata]`属性中。如果你的环境中，`Symbol`上没有`metadata`属性，可以在你的程序入口文件的所有代码之前加上以下代码：
 
 ```ts
@@ -103,4 +102,4 @@ console.dir(DocsDemo[Symbol.metadata].__naily__)
   getters: [],
   // setter访问器现在还没有支持，后续很快会支持上
 }
-``` 
+```

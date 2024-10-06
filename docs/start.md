@@ -23,7 +23,7 @@ class Foo<T> {
 
 ```ts
 interface Storage {
-  list(): void
+  list: () => void
 }
 
 class AliStorage implements Storage {
@@ -73,7 +73,7 @@ class User {
   id: number
 
   name: string
-  
+
   age: number
 
   @IsEmail()

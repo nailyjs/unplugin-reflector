@@ -1,11 +1,12 @@
+import type { PluginOption } from 'vite'
 import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
-import Unplugin from '../src/vite'
+import Reflector from '../src/vite'
 
 export default defineConfig({
   plugins: [
     Inspect(),
-    Unplugin(),
+    Reflector() as PluginOption,
   ],
 
   build: {

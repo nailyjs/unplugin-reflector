@@ -9,7 +9,7 @@ import * as ts from 'typescript'
  * @export
  * @param {SourceFile} sourceFile - The source file.
  */
-export function addImportIfHasInterface(sourceFile: SourceFile): void {
+export function addImportIfHasInterface(sourceFile: SourceFile): true {
   const typeChecker = sourceFile.getProject().getTypeChecker()
   const importDeclarations = sourceFile.getImportDeclarations()
 
@@ -38,4 +38,6 @@ export function addImportIfHasInterface(sourceFile: SourceFile): void {
       })
     }
   })
+
+  return true
 }

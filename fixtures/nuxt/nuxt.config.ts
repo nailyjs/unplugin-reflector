@@ -5,5 +5,5 @@ export default defineNuxtConfig({
 
   modules: [
     'unplugin-naily-reflector/nuxt',
-  ]
+  ],
 })

@@ -1,7 +1,7 @@
 {
   "name": "nuxt",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "nuxt": "^3.13.0",
+    "unplugin-naily-reflector": "workspace:*",
     "vue": "latest",
-    "vue-router": "latest",
-    "unplugin-naily-reflector": "workspace:*"
+    "vue-router": "latest"
   }
 }

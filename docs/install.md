@@ -68,5 +68,3 @@ build({
 
 - 类型: `string | RegExp | (string | RegExp)[]`
 - 默认: `[]`
-
-

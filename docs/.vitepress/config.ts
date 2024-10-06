@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Unplugin Reflector",
-  description: "轻量级TypeScript反射器，基于unplugin",
-  
+  title: 'Unplugin Reflector',
+  description: '轻量级TypeScript反射器，基于unplugin',
+
   themeConfig: {
     logo: './logo_black_fixed.png',
 
@@ -23,21 +23,21 @@ export default defineConfig({
       // }
       {
         text: '开始使用',
-        link: '/start'
+        link: '/start',
       },
       {
         text: '安装与配置',
-        link: '/install'
+        link: '/install',
       },
       {
         text: '类信息提取',
-        link: '/reflect-classes'
-      }
+        link: '/reflect-classes',
+      },
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/nailyjs/unplugin-reflector' },
-      { icon: 'npm', link: 'https://www.npmjs.com/package/unplugin-naily-reflector' }
-    ]
-  }
+      { icon: 'npm', link: 'https://www.npmjs.com/package/unplugin-naily-reflector' },
+    ],
+  },
 })
