@@ -7,7 +7,7 @@
 轻量级 TypeScript 反射器。
 
 [![NPM 版本](https://img.shields.io/npm/v/unplugin-naily-reflector?color=a1b858&label=npm)](https://www.npmjs.com/package/unplugin-naily-reflector)
-[English](./README.md)|简体中文
+[English](./README.md) | 简体中文
 
 </div>
 
