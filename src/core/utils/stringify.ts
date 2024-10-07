@@ -9,6 +9,11 @@ const defaultExcludeKeys = [
   'getUnionTypes',
   'getIntersectionTypes',
   'getLiteral',
+  'getSymbolEscapedName',
+  'getRawSymbolFullyQualifiedName',
+  'getSymbolFlags',
+  'getSymbolFlagsName',
+  'getSymbolName',
 ]
 
 export function jsonStringifyExcludeFunction<T>(value: T, excludeKeys: string[] = defaultExcludeKeys): string {

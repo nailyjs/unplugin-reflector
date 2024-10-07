@@ -1,8 +1,6 @@
-import Chalk from 'chalk'
+import type { ClassMetadata, FunctionMetadata } from 'virtual:unplugin-naily-reflector/runtime'
 import type { HelloWorldInterface } from './childrenFolder/test-type'
 import type { BazImpl } from './types'
-
-console.log(Chalk.red('Hello world!'))
 
 if (!Symbol.metadata) {
   // eslint-disable-next-line ts/ban-ts-comment
@@ -38,6 +36,12 @@ export class Test implements BarImpl {
     // console.log('Test')
   }
 
+  /**
+   * 这是jsdoc注释
+   *
+   * @type {string}
+   * @memberof Test
+   */
   add(a: FooImpl, _b: number) {
     return a
   }
@@ -59,8 +63,11 @@ export function testFunction(): number {
   return 1
 }
 
-export default async function testFunction2(_foo: typeof testFunction, _bar?: number) {
+export default async function testFunction2(_foo: HelloWorldInterface, _bar?: number) {
   return 'test'
 }
 
-console.dir(testFunction2)
+if (testFunction2[Symbol.metadata].__naily__?.reflectionType === 'function') {
+  const metadata = testFunction2[Symbol.metadata].__naily__ as FunctionMetadata
+  console.log(metadata.parameters[0].getInterfaceTarget()?.getReference())
+}

@@ -1,5 +1,4 @@
 import type { ClassDeclaration, MethodDeclaration } from 'ts-morph'
-import * as ts from 'typescript'
 import { useConstructorInterfaceBuilder } from '../constructor-interface-getter'
 import { jsdocBuilder } from '../convert-jsdoc'
 import { jsonStringifyExcludeFunction } from '../utils/stringify'

@@ -1,4 +1,19 @@
 import type { FilterPattern } from '@rollup/pluginutils'
+import type { ProjectOptions } from 'ts-morph'
+
+export interface ReflectInterfaceOptions {
+  reflectInterface: true
+  reflectClass: boolean
+  reflectFunction: boolean
+}
+
+export interface ReflectNoneOptions {
+  reflectInterface: false
+  reflectClass: false
+  reflectFunction: false
+}
+
+export type ReflectOptions = ReflectInterfaceOptions | ReflectNoneOptions
 
 export interface Options {
   /** @default [] */
@@ -10,21 +25,17 @@ export interface Options {
    */
   include?: FilterPattern
   /**
-   * Reflect the interface declarations. If `false`, the interface will not be reflected.
+   * The options of the `ts-morph` project.
    *
-   * @default true
+   * @type {ProjectOptions}
+   * @memberof Options
    */
-  reflectInterface?: boolean
+  projectOptions?: ProjectOptions
   /**
-   * Reflect the classes. If `false`, the class will not be reflected.
+   * The options of the reflector. If `reflectInterface` is `false`, the all reflector will be disabled.
    *
-   * @default true
+   * @type {ReflectOptions}
+   * @memberof Options
    */
-  reflectClass?: boolean
-  /**
-   * Reflect the function declarations. If `false`, the function will not be reflected.
-   *
-   * @default true
-   */
-  reflectFunction?: boolean
+  reflectOptions?: ReflectOptions
 }

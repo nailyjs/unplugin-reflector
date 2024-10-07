@@ -11,7 +11,7 @@ function convertClassMetadata(className: string | undefined, sourceFile: SourceF
   if (!classDeclaration)
     return
 
-  const preProcessText = `\nif (!${className}[Symbol.metadata]) ${className}[Symbol.metadata] = {};\nif (!${className}[Symbol.metadata].__naily__) ${className}[Symbol.metadata].__naily__ = {};\n`
+  const preProcessText = `\nif (!${className}[Symbol.metadata]) ${className}[Symbol.metadata] = {};\nif (!${className}[Symbol.metadata].__naily__) ${className}[Symbol.metadata].__naily__ = {};\n${className}[Symbol.metadata].__naily__.reflectionType = 'class';\n`
   const generatedMethodsText = convertClassMethodsMetadata(classDeclaration)
   const generatedPropertiesText = convertClassPropertiesMetadata(classDeclaration)
   const generatedImplementationsText = convertClassImplements(classDeclaration)

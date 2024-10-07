@@ -19,17 +19,15 @@ function withImportMetaId(code: string, id: string): string {
 export const unpluginFactory: UnpluginFactory<Options | undefined> = ({
   include = [/\.(ts|tsx)($|\?)/],
   exclude = [],
-  reflectInterface = true,
-  reflectClass = true,
-  reflectFunction = true,
+  projectOptions,
+  reflectOptions = { reflectInterface: true, reflectClass: true, reflectFunction: true },
 } = {
   include: [/\.(ts|tsx)($|\?)/],
   exclude: [],
-  reflectInterface: true,
-  reflectClass: true,
-  reflectFunction: true,
+  projectOptions: {},
+  reflectOptions: { reflectInterface: true, reflectClass: true, reflectFunction: true },
 }, meta) => {
-  const project = new Project()
+  const project = new Project(projectOptions)
   const moduleId = 'unplugin-naily-reflector/runtime'
   const virtualModuleId = `virtual:${moduleId}`
   const resolvedModuleId = `\0${moduleId}`
@@ -68,17 +66,17 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = ({
         sourceFile = project.addSourceFileAtPath(id)
       const typeChecker = project.getTypeChecker()
 
-      if (reflectClass)
+      if (reflectOptions.reflectInterface === true && reflectOptions.reflectClass === true)
         handleClasses(sourceFile, typeChecker)
-      if (reflectInterface)
+      if (reflectOptions.reflectInterface === true)
         // eslint-disable-next-line ts/no-unused-expressions
         addImportIfHasInterface(sourceFile) && await handleInterfaces(sourceFile, typeChecker, id)
-      if (reflectFunction)
+      if (reflectOptions.reflectInterface === true && reflectOptions.reflectFunction === true)
         await handleFunctions(sourceFile, typeChecker)
 
       const code = meta.framework !== 'webpack'
-        ? sourceFile.getText()
-        : withImportMetaId(sourceFile.getText(), id)
+        ? withImportMetaId(sourceFile.getText(), id)
+        : sourceFile.getText()
 
       return {
         code,

@@ -1,4 +1,5 @@
 import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from '@nuxt/kit'
+import type { Plugin } from 'vite'
 import type { Options } from './types'
 import vite from './vite'
 import webpack from './webpack'
@@ -15,9 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
     // ...default options
   },
   setup(options, _nuxt) {
-    addVitePlugin(() => vite(options))
+    addVitePlugin(() => vite(options) as Plugin)
     addWebpackPlugin(() => webpack(options))
-
-    // ...
   },
 })

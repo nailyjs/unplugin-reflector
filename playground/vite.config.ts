@@ -6,8 +6,10 @@ import Reflector from '../src/vite'
 export default defineConfig({
   plugins: [
     Inspect(),
-    Reflector() as PluginOption,
-  ],
+    Reflector({
+
+    }),
+  ] as PluginOption[],
 
   build: {
     minify: false,

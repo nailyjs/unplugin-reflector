@@ -37,7 +37,7 @@ function convertFunctionMetadata(func: FunctionDeclaration, typeChecker: TypeChe
   if (!funcName)
     return
 
-  const preProcessText = getDeclarationPreProcessText(funcName)
+  const preProcessText = `${getDeclarationPreProcessText(funcName)}`
   const parametersText = convertFunctionParametersMetadata(func, typeChecker)
   const returnTypeText = convertReturnTypeFunctionMetadata(func)
   const basicText = `/* Basic */\n${funcName}[Symbol.metadata].__naily__ = ${JSON.stringify({
@@ -48,6 +48,7 @@ function convertFunctionMetadata(func: FunctionDeclaration, typeChecker: TypeChe
     isNamedExport: func.isNamedExport(),
     isOverload: func.isOverload(),
     isImplementation: func.isImplementation(),
+    reflectionType: 'function',
   })}`
 
   insertText(func, preProcessText + basicText + parametersText + returnTypeText)

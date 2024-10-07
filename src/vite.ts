@@ -1,4 +1,4 @@
-import type { PluginOption } from 'vite'
+import type { Plugin, PluginOption } from 'vite'
 import { createVitePlugin } from 'unplugin'
 import type { Options } from './types'
 import { unpluginFactory } from '.'
@@ -6,4 +6,4 @@ import { unpluginFactory } from '.'
 /**
  * Vite plugin for unplugin-naily-reflector.
  */
-export default createVitePlugin(unpluginFactory) as (options?: Options) => PluginOption
+export default createVitePlugin(unpluginFactory) as (options?: Options) => Plugin | PluginOption

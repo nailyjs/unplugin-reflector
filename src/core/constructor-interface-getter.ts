@@ -13,14 +13,12 @@ function convertConstructorTargetMetadata(typing: Type, classNames: string[]): s
   return symbolName ? classNames.includes(symbolName) ? `return ${symbolName}` : returnNull : returnNull
 }
 
-function convertInterfaceTargetMetadata(typing: Type, interfaceNames: string[], sourceFile: SourceFile): string {
+function convertInterfaceTargetMetadata(typing: Type, sourceFile: SourceFile): string {
   const symbol = typing.getSymbol()
   const returnTypeSymbolName = symbol ? symbol.getName() : returnNull
   const origin = checkInterfaceOrigin(sourceFile, returnTypeSymbolName)
 
-  if (returnTypeSymbolName && interfaceNames.includes(returnTypeSymbolName))
-    return `return { name: '${returnTypeSymbolName}', getPath: () => new URL(import.meta.url).pathname, getPathReference: () => ____reflect[new URL(import.meta.url).pathname], getReference: () => ____reflect[new URL(import.meta.url).pathname]['interfaces']['${returnTypeSymbolName}'] }`
-  else if (origin)
+  if (origin)
     return `return { name: '${returnTypeSymbolName}', getPath: () => '${origin.filePath}', getPathReference: () => ____reflect['${origin.filePath}'], getReference: () => ____reflect['${origin.filePath}']['interfaces']['${returnTypeSymbolName}'] }`
   else
     return returnNull
@@ -64,16 +62,21 @@ function convertLiteralTypes(typing: Type): string {
     return returnNull
 }
 
-function constructorInterfaceBuilder(typing: Type, { classNames, interfaceNames, sourceFile }: ConvertMethodParamOptions) {
+function constructorInterfaceBuilder(typing: Type, { classNames, sourceFile }: ConvertMethodParamOptions) {
   return {
     getFlags: `return ${typing.getFlags()}`,
     getFlagsName: `return '${ts.TypeFlags[typing.getFlags()]}'`,
     getConstructorTarget: convertConstructorTargetMetadata(typing, classNames),
-    getInterfaceTarget: convertInterfaceTargetMetadata(typing, interfaceNames, sourceFile),
+    getInterfaceTarget: convertInterfaceTargetMetadata(typing, sourceFile),
     getTypeArguments: convertTypeArgumentsMetadata(typing, sourceFile),
     getUnionTypes: convertUnionTypes(typing, sourceFile),
     getIntersectionTypes: convertIntersectionTypes(typing, sourceFile),
     getLiteral: convertLiteralTypes(typing),
+    getSymbolFlags: `return ${typing.getSymbol()?.getFlags() || null}`,
+    getSymbolFlagsName: `return '${ts.SymbolFlags[typing.getSymbol()?.getFlags() || 0] || null}'`,
+    getSymbolEscapedName: `return ${typing.getSymbol()?.getEscapedName() || null} || null`,
+    getRawSymbolFullyQualifiedName: `return '${typing.getSymbol()?.getFullyQualifiedName() || null}'`,
+    getSymbolName: `return ${typing.getSymbol()?.getName() || null} || null`,
   }
 }
 
