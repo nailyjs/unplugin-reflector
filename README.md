@@ -10,9 +10,11 @@ Simple reflector for TypeScript files.
 
 </div>
 
-A reflector for TypeScript files. It's can extract `classes` and `interface declarations` from `.ts` files (currently only support `.ts` files, `.vue` files will be supported in the future, welcome to contribute).
+A reflector for TypeScript files. It's can extract `class declarations`、`interface declarations` and `function declarations` from `.ts(x)` files (currently only support `.ts(x)` files, `.vue` files will be supported in the future, welcome to contribute).
 
 Base on unplugin, it can be used in Vite, Rollup, Webpack, Nuxt, Vue CLI, and more.
+
+> Currently it's not stable, welcome to contribute.
 
 ## Install
 
