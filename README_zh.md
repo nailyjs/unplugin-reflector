@@ -4,20 +4,20 @@
 
 # unplugin-naily-reflector
 
-Simple reflector for TypeScript files.
+轻量级 TypeScript 反射器。
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-naily-reflector?color=a1b858&label=npm)](https://www.npmjs.com/package/unplugin-naily-reflector)
-English|[简体中文](./README_zh.md)
+[![NPM 版本](https://img.shields.io/npm/v/unplugin-naily-reflector?color=a1b858&label=npm)](https://www.npmjs.com/package/unplugin-naily-reflector)
+[English](./README.md)|简体中文
 
 </div>
 
-A reflector for TypeScript files. It's can extract `class declarations`、`interface declarations` and `function declarations` from `.ts(x)` files (currently only support `.ts(x)` files, `.vue` files will be supported in the future, welcome to contribute).
+一个 TypeScript 反射器。它可以从 `.ts(x)` 文件中提取 `class 声明`、`interface 声明` 和 `function 声明`（目前仅支持 `.ts(x)` 文件，`.vue` 文件等可能将在未来支持，欢迎PR）。
 
-Base on unplugin, it can be used in Vite, Rollup, Webpack, Nuxt, Vue CLI, and more.
+毕竟是基于 unplugin的，所以它可以在 Vite、Rollup、Webpack、Nuxt、Vue CLI 等框架中使用。
 
-> Currently it's not stable, welcome to contribute.
+> 目前还不是特别稳定，欢迎PR。
 
-## Install
+## 安装
 
 ```bash
 npm i unplugin-naily-reflector
