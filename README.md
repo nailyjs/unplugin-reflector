@@ -6,8 +6,12 @@
 
 Simple reflector for TypeScript files.
 
+<div>
+
 [![NPM version](https://img.shields.io/npm/v/unplugin-naily-reflector?color=a1b858&label=npm)](https://www.npmjs.com/package/unplugin-naily-reflector)
 English | [简体中文](./README_zh.md)
+
+</div>
 
 </div>
 
