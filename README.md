@@ -10,6 +10,7 @@ Simple reflector for TypeScript files.
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-naily-reflector?color=a1b858&label=npm)](https://www.npmjs.com/package/unplugin-naily-reflector)
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/nailyjs/unplugin-reflector)
+![Last Commit](https://img.shields.io/github/last-commit/nailyjs/unplugin-reflector)
 
 English | [简体中文](./README_zh.md)
 
