@@ -1,6 +1,6 @@
 <div align="center">
 
-![unplugin-naily-reflector-logo](./docs/logo_black_fixed.png)
+<img src="./docs/logo_black_fixed.png" alt="unplugin-naily-reflector" width="200" />
 
 # unplugin-naily-reflector
 
